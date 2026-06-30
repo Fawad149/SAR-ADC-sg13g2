@@ -14,7 +14,7 @@ open-source toolchain (Xschem, ngspice, KLayout, LibreLane).
 SAR ADCs dominate medium-resolution, energy-efficient data conversion: they
 reuse a single comparator across all bit decisions and dissipate almost no
 static power. This work implements a 12-bit differential SAR entirely in an
-open-source PDK and toolchain — showing that a complete, verifiable mixed-signal
+open-source PDK and toolchain, showing that a complete, verifiable mixed-signal
 data converter can be built without any proprietary EDA. Every analog block is
 full-custom and individually DRC/LVS clean, and the digital control is taken
 through a full RTL-to-GDS flow with timing closed across PVT corners.
@@ -85,10 +85,8 @@ The front-end sampling switch is bootstrapped to keep its gate-source voltage �
 and therefore its on-resistance — constant across the full input swing. The
 original sizing produced a signal-dependent on-resistance that collapsed near
 the supply rails, injecting H3/H5 distortion and capping ENOB at ~10 bit.
-Diagnosing this with a fast DC sampling-error sweep (instead of a multi-hour
-ENOB run) and resizing the main sampling devices reduced the worst-case
-near-rail sampling error from ~89 mV to sub-LSB and raised ENOB to 11.3 bit —
-the single largest performance improvement in the project.
+Diagnosing this and resizing the main sampling devices reduced the worst-case
+near-rail sampling error from ~89 mV to sub-LSB and raised ENOB to 11.3 bit.
 
 **Split capacitive DAC (CDAC).**
 A 6+6 split binary-weighted MIM-capacitor array with a bridge capacitor of
@@ -124,7 +122,7 @@ ENOB = 11.3 bit, SNDR = 69.5 dB, SFDR = 78.3 dBFS.
 ![ENOB FFT](figures/enob_N128_M11_r.png)
 
 ### Static linearity — INL / DNL
-Full-range ramp characterization. Monotonic, no missing codes; INL +/-2.85 LSB.
+Full-range ramp characterization. Monotonic, no missing codes; INL +/-1.16 LSB.
 ![INL/DNL](figures/adc_characterisation.png)
 
 ### Mismatch — Monte Carlo offset
