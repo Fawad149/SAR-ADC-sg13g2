@@ -36,12 +36,8 @@ through a full RTL-to-GDS flow with timing closed across PVT corners.
 | DNL | < 1 LSB, monotonic, no missing codes |
 | Input-referred offset (sigma) | ~ 3.9 LSB (Monte Carlo) |
 | Power | ~ 309 uW |
-| **Walden FOM** | **~ 63 fJ/conversion-step** (ENOB-based) |
+| Walden FOM | ~ 63 fJ/conversion-step (ENOB-based) |
 | Schreier FOM | ~ 165 dB |
-
-The pre-layout Walden FOM (~63 fJ/conversion-step) compares favorably with the
-IHP reference design (~235 fJ/conversion-step), a ~3.7x energy-efficiency
-improvement at the schematic level.
 
 > **Conditions & honesty notes.** All figures above are **pre-layout** transient
 > simulations at the typical corner (TT, 27 C, 1.2 V). The transient testbench
