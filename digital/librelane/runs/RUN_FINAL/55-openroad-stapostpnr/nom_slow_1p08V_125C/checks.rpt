@@ -1,0 +1,89 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_slow_1p08V_125C Corner ===================================
+
+Startpoint: B[11]$_SDFFE_PP1P_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: D[9] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock source latency
+     1    0.016518    0.051123    0.021938    0.021938 ^ clk (in)
+                                                         clk (net)
+                      0.051133    0.000000    0.021938 ^ clkbuf_0_clk/A (sg13g2_buf_8)
+     4    0.048729    0.056917    0.129818    0.151756 ^ clkbuf_0_clk/X (sg13g2_buf_8)
+                                                         clknet_0_clk (net)
+                      0.057176    0.002697    0.154453 ^ clkbuf_2_2__f_clk/A (sg13g2_buf_8)
+     8    0.031400    0.044945    0.123419    0.277872 ^ clkbuf_2_2__f_clk/X (sg13g2_buf_8)
+                                                         clknet_2_2__leaf_clk (net)
+                      0.044964    0.001350    0.279221 ^ B[11]$_SDFFE_PP1P_/CLK (sg13g2_dfrbpq_2)
+     2    0.010631    0.055423    0.297341    0.576563 ^ B[11]$_SDFFE_PP1P_/Q (sg13g2_dfrbpq_2)
+                                                         net10 (net)
+                      0.055423    0.000075    0.576638 ^ hold43/A (sg13g2_dlygate4sd3_1)
+     1    0.008569    0.087238    0.601837    1.178475 ^ hold43/X (sg13g2_dlygate4sd3_1)
+                                                         net126 (net)
+                      0.087238    0.000351    1.178826 ^ fanout10/A (sg13g2_buf_8)
+     8    0.057449    0.064176    0.155368    1.334194 ^ fanout10/X (sg13g2_buf_8)
+                                                         net33 (net)
+                      0.064642    0.003994    1.338188 ^ _164_/S (sg13g2_mux2_1)
+     1    0.005304    0.065582    0.258605    1.596793 v _164_/X (sg13g2_mux2_1)
+                                                         net54 (net)
+                      0.065583    0.000335    1.597127 v output38/A (sg13g2_buf_1)
+     1    0.008814    0.059544    0.133032    1.730160 v output38/X (sg13g2_buf_1)
+                                                         D[9] (net)
+                      0.059546    0.000391    1.730551 v D[9] (out)
+                                              1.730551   data arrival time
+
+                                 10.000000   10.000000   clock clk (rise edge)
+                                  0.000000   10.000000   clock network delay (propagated)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -1.730551   data arrival time
+---------------------------------------------------------------------------------------------
+                                              6.019449   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_slow_1p08V_125C Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_slow_1p08V_125C Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 3 unannotated drivers.
+ clkload0/X
+ clkload1/X
+ clkload2/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================

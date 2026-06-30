@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/43-openroad-stamidpnr-3/or_metrics_out.json /nix/store/m14ar4akyh801bihjgbvb3k669h95ig3-python3-3.12.10-env/lib/python3.12/site-packages/librelane/scripts/openroad/sta/corner.tcl

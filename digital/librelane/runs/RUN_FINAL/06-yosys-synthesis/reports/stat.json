@@ -1,0 +1,67 @@
+{
+   "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/tmp/18d2a434ebee4b1e824ad0a69a62c5bb.lib ",
+   "modules": {
+      "\\sar_logic": {
+         "num_wires":         108,
+         "num_wire_bits":     141,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 45,
+         "num_ports":         8,
+         "num_port_bits":     41,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         137,
+         "area":              2525.644800,
+         "num_cells_by_type": {
+            "sg13g2_a21o_1": 26,
+            "sg13g2_a21oi_1": 2,
+            "sg13g2_buf_1": 1,
+            "sg13g2_dfrbpq_1": 28,
+            "sg13g2_mux2_1": 11,
+            "sg13g2_nand3_1": 18,
+            "sg13g2_nand3b_1": 2,
+            "sg13g2_nand4_1": 6,
+            "sg13g2_nor2_1": 2,
+            "sg13g2_nor2b_1": 6,
+            "sg13g2_o21ai_1": 3,
+            "sg13g2_or2_1": 2,
+            "sg13g2_or3_1": 1,
+            "sg13g2_tiehi": 28,
+            "sg13g2_xnor2_1": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         108,
+         "num_wire_bits":     141,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 45,
+         "num_ports":         8,
+         "num_port_bits":     41,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         137,
+         "area":              2525.644800,
+         "num_cells_by_type": {
+            "sg13g2_a21o_1": 26,
+            "sg13g2_a21oi_1": 2,
+            "sg13g2_buf_1": 1,
+            "sg13g2_dfrbpq_1": 28,
+            "sg13g2_mux2_1": 11,
+            "sg13g2_nand3_1": 18,
+            "sg13g2_nand3b_1": 2,
+            "sg13g2_nand4_1": 6,
+            "sg13g2_nor2_1": 2,
+            "sg13g2_nor2b_1": 6,
+            "sg13g2_o21ai_1": 3,
+            "sg13g2_or2_1": 2,
+            "sg13g2_or3_1": 1,
+            "sg13g2_tiehi": 28,
+            "sg13g2_xnor2_1": 1
+         }
+      }
+}
+

@@ -1,0 +1,33 @@
+121. Printing statistics.
+
+=== sar_logic ===
+
+   Number of wires:                108
+   Number of wire bits:            141
+   Number of public wires:          12
+   Number of public wire bits:      45
+   Number of ports:                  8
+   Number of port bits:             41
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                137
+     sg13g2_a21o_1                  26
+     sg13g2_a21oi_1                  2
+     sg13g2_buf_1                    1
+     sg13g2_dfrbpq_1                28
+     sg13g2_mux2_1                  11
+     sg13g2_nand3_1                 18
+     sg13g2_nand3b_1                 2
+     sg13g2_nand4_1                  6
+     sg13g2_nor2_1                   2
+     sg13g2_nor2b_1                  6
+     sg13g2_o21ai_1                  3
+     sg13g2_or2_1                    2
+     sg13g2_or3_1                    1
+     sg13g2_tiehi                   28
+     sg13g2_xnor2_1                  1
+
+   Chip area for module '\sar_logic': 2525.644800
+     of which used for sequential elements: 1371.686400 (54.31%)
+

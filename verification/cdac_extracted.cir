@@ -1,0 +1,18 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 30/06/2026 01:50
+
+.SUBCKT cdac B2 B1 B0 vref B5 B4 B3 B6 B7 B8 Vout B11 B10 B9
+C$1 \$6 B2 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=4
+C$5 \$6 B1 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=2
+C$7 \$6 B0 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=1
+C$8 \$6 vref cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=1
+C$9 \$6 B5 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=32
+C$25 \$6 B4 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=16
+C$33 \$6 B3 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=8
+C$65 Vout \$6 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=1
+C$66 Vout B6 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=1
+C$67 Vout B7 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=2
+C$69 Vout B8 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=4
+C$73 Vout B11 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=32
+C$89 Vout B10 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=16
+C$97 Vout B9 cap_cmim w=10.44u l=10.44u A=108.9936p P=41.76u m=8
+.ENDS cdac

@@ -1,0 +1,47 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 30/06/2026 00:18
+
+.SUBCKT bootstrap_switch gnd clk vdd vi vo
+M$1 gnd clk \$2 gnd sg13_lv_nmos L=0.13u W=0.4u AS=0.136p AD=0.136p PS=1.48u
++ PD=1.48u
+M$2 gnd \$2 \$7 gnd sg13_lv_nmos L=0.13u W=0.4u AS=0.136p AD=0.136p PS=1.48u
++ PD=1.48u
+M$3 \$13 vdd \$18 gnd sg13_lv_nmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u
++ PD=6.68u
+M$4 gnd \$2 \$16 gnd sg13_lv_nmos L=0.2u W=1.3u AS=0.442p AD=0.442p PS=3.28u
++ PD=3.28u
+M$5 \$13 \$2 gnd gnd sg13_lv_nmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u
++ PD=6.68u
+M$6 \$19 vdd \$21 gnd sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+M$7 \$21 \$2 gnd gnd sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+M$8 vdd \$12 \$11 gnd sg13_lv_nmos L=0.13u W=1.3u AS=0.442p AD=0.442p PS=3.28u
++ PD=3.28u
+M$9 vdd \$11 \$12 gnd sg13_lv_nmos L=0.13u W=1.3u AS=0.442p AD=0.442p PS=3.28u
++ PD=3.28u
+M$10 vdd \$11 \$6 gnd sg13_lv_nmos L=0.13u W=1.3u AS=0.442p AD=0.442p PS=3.28u
++ PD=3.28u
+M$11 gnd \$20 \$34 gnd sg13_lv_nmos L=0.13u W=0.4u AS=0.136p AD=0.136p PS=1.48u
++ PD=1.48u
+M$12 \$16 \$18 vi gnd sg13_lv_nmos L=0.25u W=3.5u AS=1.19p AD=1.19p PS=7.68u
++ PD=7.68u
+M$13 vi \$19 vo gnd sg13_lv_nmos L=0.25u W=6u AS=2.04p AD=2.04p PS=12.68u
++ PD=12.68u
+M$14 vi \$2 vi gnd sg13_lv_nmos L=0.13u W=1.5u AS=0.51p AD=0.51p PS=3.68u
++ PD=3.68u
+M$15 vo \$2 vo gnd sg13_lv_nmos L=0.13u W=1.5u AS=0.51p AD=0.51p PS=3.68u
++ PD=3.68u
+M$16 vdd \$2 \$7 vdd sg13_lv_pmos L=0.13u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u
+M$17 vdd clk \$2 vdd sg13_lv_pmos L=0.13u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u
+M$18 \$6 \$34 \$19 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+M$19 \$18 \$20 vdd vdd sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+M$20 vdd \$20 \$34 vdd sg13_lv_pmos L=0.13u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u
+C$21 \$11 \$2 cap_cmim w=4.665u l=6.99u A=32.60835p P=23.31u m=1
+C$22 \$12 \$7 cap_cmim w=4.665u l=6.99u A=32.60835p P=23.31u m=1
+C$23 \$6 \$16 cap_cmim w=11.485u l=11.485u A=131.905225p P=45.94u m=1
+.ENDS bootstrap_switch

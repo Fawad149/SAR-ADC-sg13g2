@@ -1,0 +1,37 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 26/06/2026 05:46
+
+.SUBCKT dynamic_comparator_new gnd vdd out_plus out_minus Vplus Vminus clk vbias
+M$1 \$9 clk gnd \$1 sg13_lv_nmos L=0.2u W=4u AS=1.36p AD=1.36p PS=8.68u PD=8.68u
+M$2 \$15 clk gnd \$1 sg13_lv_nmos L=0.2u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$3 \$9 \$15 gnd \$1 sg13_lv_nmos L=0.2u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$4 \$15 \$9 gnd \$1 sg13_lv_nmos L=0.2u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$5 gnd \$15 out_plus \$1 sg13_lv_nmos L=0.2u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$6 gnd \$9 out_minus \$1 sg13_lv_nmos L=0.2u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$7 out_minus \$9 vdd \$4 sg13_lv_pmos L=0.2u W=8u AS=2.72p AD=2.72p PS=16.68u
++ PD=16.68u
+M$8 \$11 Vplus \$13 \$4 sg13_lv_pmos L=0.3u W=8u AS=2.72p AD=2.72p PS=16.68u
++ PD=16.68u
+M$9 \$8 \$14 \$15 \$4 sg13_lv_pmos L=0.3u W=32u AS=7.28p AD=7.28p PS=41.82u
++ PD=41.82u
+M$13 \$13 Vminus \$14 \$4 sg13_lv_pmos L=0.3u W=8u AS=2.72p AD=2.72p PS=16.68u
++ PD=16.68u
+M$14 \$30 clk \$8 \$4 sg13_lv_pmos L=0.3u W=18u AS=4.095p AD=4.095p PS=24.32u
++ PD=24.32u
+M$18 \$8 \$11 \$9 \$4 sg13_lv_pmos L=0.3u W=32u AS=7.28p AD=7.28p PS=41.82u
++ PD=41.82u
+M$22 vdd vbias \$13 \$4 sg13_lv_pmos L=0.8u W=12u AS=4.08p AD=4.08p PS=24.68u
++ PD=24.68u
+M$23 vdd vbias \$30 \$4 sg13_lv_pmos L=0.3u W=18u AS=4.095p AD=4.095p PS=24.32u
++ PD=24.32u
+M$27 out_plus \$15 vdd \$4 sg13_lv_pmos L=0.2u W=8u AS=2.72p AD=2.72p PS=16.68u
++ PD=16.68u
+R$28 \$14 gnd rppd w=2.5u l=18.02u ps=0.18u b=6 m=1
+R$29 gnd \$11 rppd w=2.5u l=18.02u ps=0.18u b=6 m=1
+R$30 \$4 vdd ntap1 A=31.9613p P=196.56u
+R$31 \$1 gnd ptap1 A=11.478675p P=66.99u
+.ENDS dynamic_comparator_new

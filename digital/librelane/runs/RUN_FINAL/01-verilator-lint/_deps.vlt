@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/tmp/d49470a526914281a9f201dcbf1b4d0f.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/tmp/d49470a526914281a9f201dcbf1b4d0f.bb.v"

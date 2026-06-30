@@ -1,0 +1,10 @@
+DESIGN_NAME: sar_logic
+
+VERILOG_FILES:
+  - dir::sar_logic.sv
+
+CLOCK_PORT: clk
+CLOCK_PERIOD: 10
+
+STD_CELL_LIBRARY: sg13g2_stdcell
+

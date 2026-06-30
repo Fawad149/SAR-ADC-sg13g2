@@ -1,0 +1,6 @@
+set circuit1 [readnet spice /home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/67-magic-spiceextraction/sar_logic.spice]
+set circuit2 [readnet verilog /dev/null]
+puts "Reading SPICE netlist file '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice'..."
+readnet spice /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice $circuit2
+readnet verilog /home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/52-openroad-fillinsertion/sar_logic.pnl.v $circuit2
+lvs "$circuit1 sar_logic" "$circuit2 sar_logic" /nix/store/m14ar4akyh801bihjgbvb3k669h95ig3-python3-3.12.10-env/lib/python3.12/site-packages/librelane/scripts/netgen/setup.tcl /home/fawad/ICdesign/sar_logic_12bit/runs/RUN_2026-06-12_03-57-55/69-netgen-lvs/reports/lvs.netgen.rpt -blackbox -json
