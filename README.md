@@ -40,14 +40,15 @@ through a full RTL-to-GDS flow with timing closed across PVT corners.
 | Schreier FOM | ~ 165 dB |
 
 > **Conditions & honesty notes.** All figures above are **pre-layout** transient
-> simulations at the typical corner (TT, 27 C, 1.2 V). The transient testbench
+> simulations at the typical corner (TT, 27 °C, 1.2 V). The transient testbench
 > excludes device thermal noise, so the simulated ENOB — and the FOM derived
 > from it — are noise-optimistic. The dominant noise terms were bounded
 > separately: kT/C sampling noise is negligible (~0.07 LSB) for the ~10.5 pF
 > total array capacitance, and comparator noise is the limiting term, bounded
-> analytically. Post-layout (parasitic-extracted) results will be added once
-> top-level integration is complete; the expected post-layout ENOB stays above
-> 10 bit.
+> analytically. The full converter is now integrated at top level and runs
+> post-layout simulation; parasitic (RC) extraction and the resulting
+> extracted-netlist figures are the remaining step, and will be added here once
+> complete. Expected post-layout ENOB stays above 10 bit.
 
 ---
 
@@ -85,10 +86,13 @@ Diagnosing this and resizing the main sampling devices reduced the worst-case
 near-rail sampling error from ~89 mV to sub-LSB and raised ENOB to 11.3 bit.
 
 **Split capacitive DAC (CDAC).**
-A 6+6 split binary-weighted MIM-capacitor array with a bridge capacitor of
-Cb = (64/63)*Cu, derived analytically so the two sub-arrays present the correct
-binary weights. Monotonic switching reduces reference-settling activity and
-switching energy. The array is laid out **common-centroid** (8x8 unit cells) so
+A 6+6 split binary-weighted MIM-capacitor array. The ideal bridge capacitor for
+an exact split would be Cb = (64/63)·Cu ≈ 1.016·Cu; here a plain unit capacitor
+(Cb = Cu) is used instead, trading a small, bounded weighting error for layout
+regularity and better matching of the bridge element. The resulting deviation
+is minor and was verified in simulation to stay within the converter's
+linearity budget. Monotonic switching reduces reference-settling activity and
+switching energy. The array is laid out **common-centroid** (8×8 unit cells) so
 linear process gradients cancel; the MSB capacitors are well-centroided and the
 bit assignment was validated against the weighting.
 
@@ -135,16 +139,18 @@ Input-referred offset distribution over sg13g2 mismatch models, sigma ~ 3.9 LSB.
 ## Layout
 
 All analog blocks are full-custom and laid out in KLayout, each DRC and LVS
-clean. *(Top-level hierarchical integration is in progress.)*
+clean, and the complete converter is integrated at top level.
 
 | Block | File | Screenshot |
 |---|---|---|
+| Top-level integrated ADC | `layout/sar_adc_top.gds` | `figures/top_level_layout.png` |
 | Split CDAC (common-centroid array) | `layout/cdac.gds` | `figures/cdac_layout.png` |
 | Preamp + StrongARM comparator | `layout/dynamic_comparator_preamp.gds` | `figures/comparator_layout.png` |
 | Bootstrapped sampling switch | `layout/bootstrap_switch.gds` | - |
 | Switch array | `layout/switch_array.gds` | - |
 | SAR logic (LibreLane GDS) | `digital/librelane/.../final/gds/sar_logic.gds` | `figures/digital_logic_gds.png` |
 
+![Top-level layout](figures/top_level_layout.png)
 ![CDAC layout](figures/cdac_layout.png)
 ![Comparator layout](figures/comparator_layout.png)
 ![SAR logic GDS](figures/digital_logic_gds.png)
@@ -157,6 +163,7 @@ Every block is **DRC clean and LVS clean** individually:
 
 | Block | DRC | LVS |
 |---|---|---|
+| Top-level integrated ADC | clean | clean |
 | Bootstrapped sampling switch | clean | clean |
 | Split CDAC | clean | clean |
 | Preamp + StrongARM comparator | clean | clean |
@@ -168,8 +175,10 @@ DRC databases (`verification/*.lyrdb`), and the complete LibreLane run including
 per-corner STA, DRC (Magic + KLayout), and LVS (Netgen) reports under
 `digital/librelane/runs/RUN_FINAL/`.
 
-**Top-level hierarchical integration** (full-chip assembly, DRC/LVS, parasitic
-extraction, and post-layout simulation) is the current work item.
+**Top-level integration is complete:** all blocks are assembled into the full
+converter, which is **DRC clean and LVS clean at top level** and runs
+post-layout simulation. Parasitic (RC) extraction and the final
+parasitic-extracted post-layout simulation are the remaining work item.
 
 ---
 
@@ -247,3 +256,6 @@ libs, and all STA/DRC/LVS reports.
 - Reproducible characterization: every reported metric regenerates from the
   committed raw data via the included Python scripts.
 
+## License
+
+Released under the Apache-2.0 License (see `LICENSE`).
