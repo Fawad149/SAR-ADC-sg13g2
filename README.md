@@ -35,8 +35,8 @@ through a full RTL-to-GDS flow with timing closed across PVT corners.
 | INL (best-fit) | +/-1.16 LSB |
 | DNL | < 1 LSB, monotonic, no missing codes |
 | Input-referred offset (sigma) | ~ 3.9 LSB (Monte Carlo) |
-| Power | ~ 309 uW |
-| Walden FOM | ~ 63 fJ/conversion-step (ENOB-based) |
+| Power | ~ 272 uW |
+| Walden FOM | ~ 54 fJ/conversion-step (ENOB-based) |
 | Schreier FOM | ~ 165 dB |
 
 > **Conditions & honesty notes.** All figures above are **pre-layout** transient
